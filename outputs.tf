@@ -8,6 +8,20 @@ output "nginx_ingress_status" {
   value       = "Nginx Ingress deployed in ${helm_release.nginx_ingress.namespace} namespace"
 }
 
+output "grafana_status" {
+  description = "Grafana deployment status"
+  value       = "Grafana deployed in ${helm_release.grafana.namespace} namespace"
+}
+
+output "grafana_admin_credentials" {
+  description = "Grafana admin login credentials"
+  value = {
+    url      = "http://grafana.local"
+    username = "admin"
+    password = var.grafana_admin_password
+  }
+}
+
 output "k8s_context" {
   description = "Current Kubernetes context in use"
   value       = var.k8s_context

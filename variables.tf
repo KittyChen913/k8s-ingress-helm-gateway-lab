@@ -15,3 +15,8 @@ variable "nginx_ingress_version" {
   type        = string
   default     = "4.8.3"
 }
+
+variable "grafana_admin_password" {
+  description = "Grafana admin user password"
+  type        = string
+}

@@ -32,4 +32,7 @@ resource "helm_release" "nginx_ingress" {
       }
     })
   ]
+
+  # wait = false：Helm Chart 立即返回，不等待 Pod Ready，避免 Terraform 在等待 Pod 啟動時超時
+  wait = false
 }

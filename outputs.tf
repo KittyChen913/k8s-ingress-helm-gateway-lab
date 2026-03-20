@@ -3,9 +3,9 @@ output "namespace" {
   value       = kubernetes_namespace.lab.metadata[0].name
 }
 
-output "nginx_ingress_status" {
-  description = "Nginx Ingress Controller deployment status"
-  value       = "Nginx Ingress deployed in ${helm_release.nginx_ingress.namespace} namespace"
+output "gateway_controller_status" {
+  description = "Gateway API controller deployment status"
+  value       = "Envoy Gateway deployed in ${helm_release.envoy_gateway.namespace} namespace"
 }
 
 output "grafana_status" {
@@ -40,7 +40,7 @@ Terraform Basic Environment Ready!
 2. Namespace created:
    kubectl get namespace ${kubernetes_namespace.lab.metadata[0].name}
 
-3. Next: Deploy Nginx Ingress Controller
+3. Next: Deploy Gateway API stack
    terraform apply
 
 =====================================

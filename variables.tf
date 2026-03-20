@@ -7,13 +7,19 @@ variable "k8s_context" {
 variable "namespace" {
   description = "Kubernetes namespace name"
   type        = string
-  default     = "ingress-lab"
+  default     = "gateway-lab"
 }
 
-variable "nginx_ingress_version" {
-  description = "Nginx Ingress Chart version"
+variable "gateway_namespace" {
+  description = "Gateway controller namespace name"
   type        = string
-  default     = "4.8.3"
+  default     = "gateway-system"
+}
+
+variable "envoy_gateway_version" {
+  description = "Envoy Gateway Helm chart version"
+  type        = string
+  default     = "1.2.0"
 }
 
 variable "grafana_admin_password" {

@@ -5,7 +5,7 @@ resource "kubernetes_namespace" "lab" {
     labels = {
       "app.kubernetes.io/managed-by" = "terraform"
       "environment"                  = "lab"
-      "ingress-nginx"                = "enabled"
+      "gateway-api"                  = "enabled"
     }
   }
 }

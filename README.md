@@ -1,4 +1,4 @@
-# k8s-ingress-helm-gateway-lab
+# k8s-helm-gateway-api-lab
 
 透過 Terraform 在 Minikube 上部署 Envoy Gateway 與 Grafana，並使用 Kubernetes Gateway API 進行流量路由的實驗室環境。
 
@@ -135,7 +135,7 @@ terraform destroy
 ## 📁 檔案結構
 
 ```
-📁 k8s-ingress-helm-gateway-lab/
+📁 k8s-helm-gateway-api-lab/
 ├── 📄 providers.tf                   # Terraform、Kubernetes 與 Helm Provider 配置
 ├── 📄 variables.tf                   # 變數定義
 ├── 📄 kubernetes.tf                  # Kubernetes Namespace 資源配置
